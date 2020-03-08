@@ -1,25 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
+
 function App() {
+  const [data, setData] = useState([]);
+  const proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+    flickrUrl = 'https://api.flickr.com/services/feeds/photos_public.gne?tags=space&tagmode=all&format=json&nojsoncallback=true'
+
+  useEffect(() => {
+    fetchData();
+  }, [flickrUrl])
+
+  async function fetchData() {
+    let response = await fetch(proxyUrl + flickrUrl)
+    response = await response.json()
+    setData(response.items)
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="card">
+      {data.map((item) =>
+        <article className="box">
+          <div dangerouslySetInnerHTML={{
+            __html: item.description
+          }}>
+          </div>
+         <div>
+        <p>Tags: <b>{item.tags}</b></p>
+           </div> 
+        
+        </article>
+      )}
+      {console.log(data)}
+
+
+    </main>
   );
 }
 
