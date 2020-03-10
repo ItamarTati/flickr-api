@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     fetchData();
-  }, [flickrUrl])
+  }, )
 
   async function fetchData() {
     let response = await fetch(proxyUrl + flickrUrl)
