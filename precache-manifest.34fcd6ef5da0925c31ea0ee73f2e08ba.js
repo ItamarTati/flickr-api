@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9d92553990b24989f3f3c188f713a393",
+    "revision": "50fc6be85aa323cfa46fee6048b8a9fb",
     "url": "/flickr-api/index.html"
   },
   {
-    "revision": "fcae742d1dace644e039",
+    "revision": "5604d49502ac10cec053",
     "url": "/flickr-api/static/css/main.da6b6583.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flickr-api/static/js/2.feef0131.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fcae742d1dace644e039",
-    "url": "/flickr-api/static/js/main.bbd5d0aa.chunk.js"
+    "revision": "5604d49502ac10cec053",
+    "url": "/flickr-api/static/js/main.a711c99b.chunk.js"
   },
   {
     "revision": "0a9c9ce847af98224297",
